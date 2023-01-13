@@ -1,23 +1,22 @@
 """
-4-1 문제
-1~10 사이의 숫자를 선택해서 secret 변수에 할당한다.
-그리고 1~10 사이의 다른 숫자를 선택해서 guess 변수에 할당한다.
-if, elif, else 문을 사용하여 guess 변수가 secret 변수보다 작으면
-'too low', 크면 'too high', 일치하면 'just right'을 출력한다.
+True나 False를 small과 green 변수에 할당한다.
+if, else 문을 사용하여 작은 것(small)과 녹색(green)을
+기준으로 체리, 완두콩, 수박, 호박(cherry, pea, watermelon, pumpkin)을
+출력해보자
+(예: 체리는 작고 녹색이 아니다, 완두콩은 작고 녹색이다, 수박은 크고 녹색이다,
+호박은 크고 녹색이 아니다).
 """
+small = True
+green = True
 
-import random
-
-secret = random.randint(1, 10)
-print(secret)
-guess = random.randint(1, 10)
-print(guess)
-
-if guess < secret:
-    print('too low')
-
-elif guess > secret:
-    print('too high')
+if small:
+    if green:
+        print("This is a pea.")
+    else:
+        print("This is a cherry.")
 
 else:
-    'just right'
+    if green:
+        print("This is a watermelon")
+    else:
+        print("This is a pumpkin")
